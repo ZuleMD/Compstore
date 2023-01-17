@@ -16,7 +16,7 @@ function App() {
         <Route path="/dashboard" component={Adminscreen} />
         <Route path="/register" exact component={Registerscreen} />
         <Route path="/login" exact component={Loginscreen} />
-        <Route path="/compdetails" exact component={CompDetails} />
+        <Route path="/compdetails/:compid" exact component={CompDetails} />
 
       </BrowserRouter>
       <Footer />

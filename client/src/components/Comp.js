@@ -1,6 +1,7 @@
 import React from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 export default function Comp({ comp }) {
     AOS.init()
@@ -26,9 +27,9 @@ export default function Comp({ comp }) {
                     </div>
                 </div>
                 <div className='card-footer'>
-                    <a href="/compdetails" className="voir">Voir détails
+                    <Link to={`compdetails/${comp._id}`} className="voir">Voir détails
                         &nbsp;<i className='fa fa-arrow-circle-o-right' style={{ fontSize: '20px', color: "#00bcf2" }}></i>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>
