@@ -34,23 +34,21 @@ export default function Registerscreen() {
     }
 
     return (
-        <div className='register'>
-            <div className="row justify-content-center mt-5">
-                <div className="col-md-5 mt-5 shadow-lg p-3 mb-5 bg-body rounded">
-                    {loading && (<Loading />)}
-                    {error && (<Error error="Cette adresse e-mail est déjà utilisée" />)}
+        <div className="row justify-content-center mt-5">
+            <div className="col-md-5 mt-5 shadow-lg p-3 mb-5 bg-body rounded">
+                {loading && (<Loading />)}
+                {error && (<Error error="Cette adresse e-mail est déjà utilisée" />)}
 
 
-                    <h2 style={{ fontSize: '35px' }}>S'inscrire</h2>
-                    <div>
-                        <input required type="text" placeholder="Nom" className="form-control" value={nom} onChange={(e) => { setnom(e.target.value) }} />
-                        <input required type="text" placeholder="Email" className="form-control" value={email} onChange={(e) => { setemail(e.target.value) }} />
-                        <input required type="password" placeholder="Mot de passe" className="form-control" value={mdp} onChange={(e) => { setmdp(e.target.value) }} />
-                        <input required type="password" placeholder="Confirmez le mot de passe" className="form-control" value={cmdp} onChange={(e) => { setcmdp(e.target.value) }} />
-                        <button onClick={register} className="btn btnauth mt-3 mb-3">S'inscrire</button>
-                        <br />
-                        <a style={{ color: 'black' }} href="/login" className="mt-2">Déjà inscrit?</a>
-                    </div>
+                <h2 style={{ fontSize: '35px' }}>S'inscrire</h2>
+                <div>
+                    <input required type="text" placeholder="Nom" className="form-control" value={nom} onChange={(e) => { setnom(e.target.value) }} />
+                    <input required type="text" placeholder="Email" className="form-control" value={email} onChange={(e) => { setemail(e.target.value) }} />
+                    <input required type="password" placeholder="Mot de passe" className="form-control" value={mdp} onChange={(e) => { setmdp(e.target.value) }} />
+                    <input required type="password" placeholder="Confirmez le mot de passe" className="form-control" value={cmdp} onChange={(e) => { setcmdp(e.target.value) }} />
+                    <button onClick={register} className="btn btnauth mt-3 mb-3">S'inscrire</button>
+                    <br />
+                    <a style={{ color: 'black' }} href="/login" className="mt-2">Déjà inscrit?</a>
                 </div>
             </div>
         </div>

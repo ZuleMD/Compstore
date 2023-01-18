@@ -88,6 +88,7 @@ export default function CompDetails({ match }) {
                                     </div>
                                     <div className="date"> <span className="text-muted">12 juin</span> </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -95,11 +96,11 @@ export default function CompDetails({ match }) {
                         <div className="card">
 
                             <div className="about">
-                                <h1 className="font-weight-bold">{nom}</h1>
+                                <h1 className="font-weight-bold" style={{ color: 'black' }}>{nom}</h1>
                                 <h5 className="font-weight-bold">{code}</h5>
-                                <h3 className="font-weight-bold">{prix} TND</h3>
-                                <h1 className="font-weight-bold" style={disp == "En stock" ? { color: "#008000" } : { color: "#b83e3ee8" }}>{disp}</h1>
                                 <h3 className="font-weight-bold">Catégorie: {categorie}</h3>
+                                <p style={{ fontSize: '30px', color: 'red' }}>{prix} TND</p>
+                                <h1 className="font-weight-bold" style={disp == "En stock" ? { color: "#008000" } : { color: "#b83e3ee8" }}>{disp}</h1>
 
                             </div>
                             <div className="buttons"> <button className="btn btn-outline-warning btn-long cart">Ajouter au panier</button> <button className="btn btn-warning btn-long buy">Achetez-le maintenant</button> <button className="btn btn-light wishlist"> <i className="fa fa-heart"></i> </button> </div>
@@ -116,36 +117,60 @@ export default function CompDetails({ match }) {
                             </div>
                         </div>
                         <div className="card mt-2">
-                            <span className="badge bg-dark" style={{ marginRight: "700px" }}>Fonctionnalités</span>
+                            <span className="card-title">Fonctionnalités</span>
                             <div className="similar-products mt-2 d-flex flex-row">
-                                <table className="table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">First</th>
-                                            <th scope="col">Last</th>
-                                            <th scope="col">Handle</th>
-                                        </tr>
-                                    </thead>
+                                <table className="table table-bordered">
+
                                     <tbody>
                                         <tr>
-                                            <th scope="row">1</th>
-                                            <td>Mark</td>
-                                            <td>Otto</td>
-                                            <td>@mdo</td>
+                                            <th style={{ color: "black", fontSize: '16px' }}>Système d'exploitation</th>
+                                            <th>Windows 10</th>
+
                                         </tr>
                                         <tr>
-                                            <th scope="row">2</th>
-                                            <td>Jacob</td>
-                                            <td>Thornton</td>
-                                            <td>@fat</td>
+                                            <th style={{ color: "black", fontSize: '16px' }}>Processeur</th>
+                                            <th>Intel Atom</th>
+
+
                                         </tr>
                                         <tr>
-                                            <th scope="row">3</th>
-                                            <td>Larry</td>
-                                            <td>the Bird</td>
-                                            <td>@twitter</td>
+                                            <th style={{ color: "black", fontSize: '16px' }}>Type Processeur</th>
+                                            <th>Quad Core</th>
+
                                         </tr>
+                                        <tr>
+                                            <th style={{ color: "black", fontSize: '16px' }}>Référence Processeur</th>
+                                            <th>Intel Atom Z8350</th>
+
+                                        </tr>
+                                        <tr>
+                                            <th style={{ color: "black", fontSize: '16px' }}>Mémoire Cache</th>
+                                            <th>2 Mo</th>
+
+                                        </tr>
+                                        <tr>
+                                            <th style={{ color: "black", fontSize: '16px' }}>Mémoire</th>
+                                            <th>4 Go</th>
+
+                                        </tr>
+                                        <tr>
+                                            <th style={{ color: "black", fontSize: '16px' }}>Disque Dur</th>
+                                            <th>64 Go eMMC</th>
+
+                                        </tr>
+                                        <tr>
+                                            <th style={{ color: "black", fontSize: '16px' }}>Type Disque Dur</th>
+                                            <th>eMMC</th>
+
+                                        </tr>
+
+                                        <tr>
+                                            <th style={{ color: "black", fontSize: '16px' }}>Carte Graphique</th>
+                                            <th>Graphique Intégrée</th>
+
+                                        </tr>
+
+
                                     </tbody>
                                 </table>
                             </div>

@@ -101,11 +101,10 @@ hr {
 }
 
 .buttons .cart:hover {
-    background-color: #cccccc !important;
+    background-color: #eeeded !important;
 
 }
 
-.card:hover {}
 
 .buttons .buy {
     color: #fff;
@@ -145,11 +144,12 @@ hr {
 }
 
 .buttons .wishlist:hover i {
-    color: #fff
+    color: #e86464
 }
 
 .buttons .wishlist i {
-    color: #ff7676
+
+    color: #e86464
 }
 
 .comment-ratings i {

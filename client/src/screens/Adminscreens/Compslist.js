@@ -23,7 +23,7 @@ export default function Compslist() {
 
     return (
         <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-12" >
 
                 <MaterialTable
                     columns={[
@@ -117,7 +117,7 @@ export default function Compslist() {
                     title={<h2>Liste produits</h2>}
                     options={{
                         padding: "dense",
-                        pageSize: 3,
+                        pageSize: 2,
                         pageSizeOptions: [2, 3],
 
                     }}

@@ -28,6 +28,8 @@ export const filterComps = (searchkey, categorie) => async dispatch => {
             filteredComps = response.data.filter(comp => comp.categorie === categorie)
 
         }
+
+
         dispatch({ type: 'GET_COMPS_SUCCESS', payload: filteredComps })
     } catch (error) {
         dispatch({ type: 'GET_COMPS_FAILED', payload: error })
@@ -35,6 +37,34 @@ export const filterComps = (searchkey, categorie) => async dispatch => {
     }
 
 }
+
+export const filterCompsbyPrice = (isActive) => async dispatch => {
+
+
+    dispatch({ type: 'GET_COMPS_REQUEST' })
+
+    try {
+        var filteredComps;
+        const response = await axios.get('/api/comps/getallcomps')
+
+        if (isActive) {
+            filteredComps = response.data.sort((a, b) => parseInt(a.prix) - parseInt(b.prix))
+
+        }
+
+        if (!isActive) {
+            filteredComps = response.data.sort((a, b) => parseInt(b.prix) - parseInt(a.prix))
+
+        }
+
+        dispatch({ type: 'GET_COMPS_SUCCESS', payload: filteredComps })
+    } catch (error) {
+        dispatch({ type: 'GET_COMPS_FAILED', payload: error })
+        console.log(error)
+    }
+
+}
+
 
 export const addComp = (comp) => async dispatch => {
     dispatch({ type: 'ADD_COMP_REQUEST' })
