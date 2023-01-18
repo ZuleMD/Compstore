@@ -94,10 +94,11 @@ export default function Adminscreen() {
                 <div className="content">
                     <div className="page-inner">
                         <div className="page-header mt-4">
-                            <h4 className="page-title">Tableau de bord</h4>
-
+                            <h4 className="page-title">
+                                <p>Tableau de bord                                 <img src="assetss/img/compstorelogo.png" alt="logo" style={{ width: "40px", float: "left" }}></img>
+                                </p>
+                            </h4>
                         </div>
-
                         <Switch>
                             <Route path="/dashboard/compslist" component={Compslist} exact />
                             <Route path="/dashboard/addcomp" component={Addcomp} exact />

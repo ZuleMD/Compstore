@@ -99,6 +99,12 @@ export default function CompDetails({ match }) {
                                 <h1 className="font-weight-bold" style={{ color: 'black' }}>{nom}</h1>
                                 <h5 className="font-weight-bold">{code}</h5>
                                 <h3 className="font-weight-bold">Catégorie: {categorie}</h3>
+                                {categorie == "Laptop en promotion" ?
+                                    (<span style={{ color: 'red', textDecoration: 'line-through', fontSize: "20px" }}>700,000 TND</span>)
+                                    : categorie == "PC en promotion" ? (
+                                        <span style={{ color: 'red', textDecoration: 'line-through', fontSize: "20px" }}>5700,000 TND</span>) : <span></span>
+                                }
+
                                 <p style={{ fontSize: '30px', color: 'red' }}>{prix} TND</p>
                                 <h1 className="font-weight-bold" style={disp == "En stock" ? { color: "#008000" } : { color: "#b83e3ee8" }}>{disp}</h1>
 

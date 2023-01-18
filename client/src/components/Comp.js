@@ -22,7 +22,11 @@ export default function Comp({ comp }) {
                     </Link>
                     <div className="d-flex align-items-center justify-content-between pt-3">
                         <div className="d-flex flex-column">
-                            {comp.categorie == "Laptop en promotion" || comp.categorie == "PC en promotion" ? <span style={{ color: 'red', textDecoration: 'line-through' }}>700,000 TND</span> : <span></span>}
+                            {comp.categorie == "Laptop en promotion" ?
+                                (<span style={{ color: 'red', textDecoration: 'line-through', fontSize: "20px" }}>700,000 TND</span>)
+                                : comp.categorie == "PC en promotion" ? (
+                                    <span style={{ color: 'red', textDecoration: 'line-through', fontSize: "20px" }}>5700,000 TND</span>) : <span></span>
+                            }
                             <div className=" font-weight-bold">{comp.prix} TND</div>
                             <div className="rebate" style={comp.disp == "En stock" ? { color: "#008000" } : { color: "#b83e3ee8" }}>{comp.disp} </div>
                         </div>

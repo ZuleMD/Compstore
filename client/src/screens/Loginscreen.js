@@ -23,27 +23,48 @@ export default function Loginpage() {
 
     }, [])
     function login() {
-
         const user = { email, mdp }
-        dispatch(loginUser(user))
+
+        if (email == "" || mdp == "") {
+            alert("champs vide!!")
+        } else {
+            dispatch(loginUser(user))
+
+        }
     }
 
     return (
 
+        <div className='row justify-content-center'>
+            <div className="col-sm-4" style={{ marginTop: "160px" }}>
 
-        <div className="row justify-content-center mt-5">
-            <div className="col-md-5 mt-5 shadow-lg p-3 mb-5 bg-body rounded ">
-                <h2 style={{ fontSize: '35px' }}>Connexion</h2>
-                {loading && (<Loading />)}
-                {error && (<Error error="Informations invalides" />)}
-                <div>
-                    <input required type="text" placeholder="Email" className="form-control" value={email} onChange={(e) => { setemail(e.target.value) }} />
-                    <input required type="password" placeholder="Mot de passe" className="form-control" value={mdp} onChange={(e) => { setmdp(e.target.value) }} />
+                <div className="card">
+                    <div className="card-body">
+                        <h4 className="card-title text-center mb-4 mt-1" style={{ fontSize: '30px', color: "black" }}>Connexion</h4>
+                        <hr />
+                        <p className="text-success text-center">Veuillez saisir votre adresse e-mail et mot de passe pour accéder à votre espace </p>
 
-                    <button onClick={login} className="btn btnauth mt-3 mb-3">Connexion</button>
-                    <br />
-                    <a style={{ color: 'black' }} href="/register" className="mt-2">Créer mon compte</a>
+                        {loading && (<Loading />)}
+                        {error && (<Error error="Informations invalides" />)}
+                        <div className="form-group">
+                            <div className="input-group">
+
+                                <input className="form-control" placeholder="Email" type="email" value={email} onChange={(e) => { setemail(e.target.value) }} />
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <div className="input-group">
+
+                                <input className="form-control" placeholder="Mot de passe" type="password" value={mdp} onChange={(e) => { setmdp(e.target.value) }} />
+                            </div>
+                        </div>
+                        <div className="form-group">
+                            <button onClick={login} className="btn btnauth rounded"> Connexion  </button>
+                        </div>
+                        <p className="text-center"><a href="/register" className="btn">Créer mon compte</a></p>
+                    </div>
                 </div>
+
             </div>
         </div>
 
