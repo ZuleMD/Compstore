@@ -31,7 +31,7 @@ export default function Filter() {
                 </div>
 
                 <div className="col-md-3  ">
-                    <input onChange={(e) => { setsearchkey(e.target.value) }} value={searchkey} type="text" className="form-control w-100" placeholder="Filtrer par marque" />
+                    <input onChange={(e) => { setsearchkey(e.target.value) }} value={searchkey} type="text" className="form-control w-100" placeholder="Veuillez saisir un mot clé" />
                 </div>
                 <div className="col-md-3  ">
                     <select onChange={(e) => { setcategorie(e.target.value) }} value={categorie} className="form-control w-100 mt-2">
