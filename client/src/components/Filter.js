@@ -18,7 +18,7 @@ export default function Filter() {
     return (
         <div className="container">
             <div className="row  shadow-lg p-3 mb-5 bg-body rounded justify-content-center">
-                <div classNamme="col-md-3" style={{
+                <div className="col-md-3" style={{
                     margin: 'auto',
                     display: 'block',
                     width: 'fit-content'
