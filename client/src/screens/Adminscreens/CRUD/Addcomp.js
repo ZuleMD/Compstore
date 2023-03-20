@@ -37,11 +37,10 @@ export default function Addcomp() {
             categorie,
             image,
             description,
-
         }
 
         dispatch(addComp(comp))
-        swal("", "Produit crée avec succès", "success");
+        swal("", "Produit crée avec succès :)", "success");
         history.push('/dashboard/compslist');
     }
 
